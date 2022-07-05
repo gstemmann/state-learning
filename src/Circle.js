@@ -3,7 +3,7 @@ import "./Circle.css";
 
 const Circle = (props)  => {
     return (
-        <div className="circle" style= {{
+        <div className="Circle" style= {{
             backgroundColor: props.color
         }}>
             {props.index + 1}
