@@ -11,9 +11,7 @@ const NumbersList = () => {
     return (
         <ul>
             {currentNumbers.map(currNum =>(
-                <li>
-                    <NumberItem number={currNum} remove={remove}/>
-                </li>
+                    <NumberItem number={currNum} remove={remove} key={currNum}/>
             ))}
         
         </ul>
