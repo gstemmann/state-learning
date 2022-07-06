@@ -1,12 +1,17 @@
 import React from "react";
 import "./Circle.css";
 
-const Circle = (props)  => {
+const Circle = ({ color, index, x, y, changePosition})  => {
     return (
-        <div className="Circle" style= {{
-            backgroundColor: props.color
+        <div onClick={() => changePosition(index)}
+            className="Circle"
+            style= {{
+            backgroundColor: color,
+            position: "absolute",
+            left: `${x}vh`,
+            top: `${y}vh`
         }}>
-            {props.index + 1}
+            {index + 1}
         </div>
     )
 }
