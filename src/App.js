@@ -5,12 +5,13 @@ import ColoredCircles from "./ColoredCircles";
 // import Counter from './Counter';
 // import Group from './Group';
 import NumbersList from './NumbersList';
+import UserForm from './UserForm';
 
 
 function App() {
   return (
     <div className="App">
-    <ColoredCircles />
+    <UserForm />
        
     </div>
   );
