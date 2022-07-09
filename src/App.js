@@ -6,12 +6,13 @@ import ColoredCircles from "./ColoredCircles";
 // import Group from './Group';
 import NumbersList from './NumbersList';
 import UserForm from './UserForm';
+import ShoppingList from './ShoppingList';
 
 
 function App() {
   return (
     <div className="App">
-    <UserForm />
+    <ShoppingList />
        
     </div>
   );
