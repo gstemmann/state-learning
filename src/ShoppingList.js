@@ -1,15 +1,23 @@
 import React, { useState } from 'react';
+import { v4 as uuid } from 'uuid';
 import SingleItem from './SingleItem';
 import FormForNewItem from './FormForNewItem';
 
 const ShoppingList = () => {
-    const INITIAL_STATE = {
-        name: '',
-        qty: ''
-    }
+    const INITIAL_STATE = [{
+        id: uuid(),
+        name: 'blue butter',
+        qty: 'while you wait'
+    },
+    {
+        id: uuid(), 
+        name: 'red butter',
+        qty: 'while you wait'
+    }];
+
     const [currentItems, changeItems] = useState([INITIAL_STATE]);
-    const addItemToList = (name, qty) => {
-        changeItems(currentItems => [ ...currentItems, { name, qty } ])
+    const addItemToList = (brandNewItem) => {
+        changeItems(currentItems => [ ...currentItems, { ...brandNewItem, id:uuid() } ])
     }
    
     return (
@@ -19,7 +27,7 @@ const ShoppingList = () => {
             <ul>
                 {currentItems.map(({ id, name, qty}) => (
                     <li>
-                        <SingleItem name={name} id={id} qty={qty} key={id} />
+                        <SingleItem id={id} name={name} qty={qty} key={id} />
                     </li>
                 ))}
             </ul>

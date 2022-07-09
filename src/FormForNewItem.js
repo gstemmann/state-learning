@@ -13,7 +13,7 @@ const FormForNewItem = ({ addItemToList }) => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        addItemToList(formData.name, formData.qty);
+        addItemToList({ ...formData });
         changeFormData(INITIAL_STATE);
     }
 
@@ -31,7 +31,9 @@ const FormForNewItem = ({ addItemToList }) => {
                 <label htmlFor="qty">Number of Items:</label>
                 <input
                     id="qty"
-                    type="text"
+                    type="range"
+                    min="1"
+                    max="10"
                     name="qty"
                     placeholder="Product Quantity"
                     value={formData.qty}
