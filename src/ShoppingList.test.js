@@ -6,5 +6,5 @@ import ShoppingList from './ShoppingList';
 
 
 it('renders the ShoppingList component', () => {
-  render(<App />);
+  render(<ShoppingList />);
 });
