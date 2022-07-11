@@ -1,57 +1,23 @@
 import React, { useState } from 'react';
 
+
 const UserForm = () => {
-    const initialState = {
-        username: '',
-        email: '',
-        password: ''
+    const [name, changeName] = useState('blue man');
+    const handleChange = (e) => {
+        changeName(e.target.value)
     }
-    const [formData, changeFormData] = useState(initialState);
-    const handleChangeOfState = e => {
-        const { name, value } = e.target;
-        changeFormData(data => ({
-            ...data,
-            [name]: value
-        }))
+    const handleSubmit = () => {
+      
     }
-
-    const handleSubmit = e => {
-        e.preventDefault();
-        const { username, email, password } = formData;
-        alert(`created user: ${username} ${email} ${password}`)
-        changeFormData(initialState);
-        
-    }
-
 
     return (
-        <form onSubmit={handleSubmit}>
+        <form>
             <input 
-                id="name"
-                name="username"
                 type="text" 
-                placeholder="username" 
-                value={formData.username} 
-                onChange={handleChangeOfState}
-            />
-
-            <input 
-                id="email"
-                name="email"
-                type="text"
-                placeholder="Email"
-                value={formData.email}
-                onChange={handleChangeOfState}
-            />
-            <input 
-                id="password"
-                name="password"
-                type="text"
-                placeholder="Password"
-                value={formData.password}
-                onChange={handleChangeOfState}
-            />
-            <button> add </button>
+                placeholder="Name" 
+                value={name} 
+                onChange={handleChange} />
+            <button onClick={handleSubmit}> add </button>
         </form>
     );
 }
