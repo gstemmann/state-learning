@@ -5,7 +5,7 @@ const FormForNewItem = ({ addItemToList }) => {
         name: '',
         qty: ''
     }
-    const [formData, changeFormData] = useState([INITIAL_STATE]);
+    const [formData, changeFormData] = useState(INITIAL_STATE);
     const handleChangeOfState = (e) => {
         const { name, value } = e.target; 
         changeFormData(formData => ({ ...formData, [name]: value }))

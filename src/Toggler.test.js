@@ -3,6 +3,9 @@ import { render, fireEvent, screen } from '@testing-library/react';
 import App from './App';
 import Toggler from './Toggler';
 
+it('renders the Toggler component', () => {
+  render(<Toggler />);
+});
 
 
 it('should toggle', () => {

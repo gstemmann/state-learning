@@ -15,9 +15,9 @@ const ShoppingList = () => {
         qty: 'while you wait'
     }];
 
-    const [currentItems, changeItems] = useState([INITIAL_STATE]);
+    const [currentItems, changeItems] = useState(INITIAL_STATE);
     const addItemToList = (brandNewItem) => {
-        changeItems(currentItems => [ ...currentItems, { ...brandNewItem, id:uuid() } ])
+        changeItems(currentItems => [ ...currentItems, { ...brandNewItem } ])
     }
    
     return (
@@ -26,9 +26,7 @@ const ShoppingList = () => {
             <FormForNewItem addItemToList={addItemToList} />
             <ul>
                 {currentItems.map(({ id, name, qty}) => (
-                    <li>
-                        <SingleItem id={id} name={name} qty={qty} key={id} />
-                    </li>
+                    <li key={uuid()}> name: { name } qty : { qty }</li>
                 ))}
             </ul>
         </div>

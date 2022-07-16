@@ -1,0 +1,56 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`matches snapshot 1`] = `
+<DocumentFragment>
+  <div>
+    <h1>
+      Shopping List
+    </h1>
+    <form>
+      <label
+        for="name"
+      >
+        Product Name:
+      </label>
+      <input
+        id="name"
+        name="name"
+        placeholder="Product Name"
+        type="text"
+        value=""
+      />
+      <label
+        for="qty"
+      >
+        Number of Items:
+      </label>
+      <input
+        id="qty"
+        max="10"
+        min="1"
+        name="qty"
+        placeholder="Product Quantity"
+        type="range"
+        value=""
+      />
+      <button
+        type="submit"
+      >
+        Add Item
+      </button>
+    </form>
+    <ul>
+      <li>
+        <ul>
+          <li>
+            Product Name:  
+          </li>
+          <li>
+             Number of Items:  
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+</DocumentFragment>
+`;

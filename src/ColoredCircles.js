@@ -11,12 +11,7 @@ const ColoredCircles = () => {
     const addCircle = (newColor) => {
         changeCircles([...currentCircle, { color: newColor, x:getRandom(), y:getRandom() }]);
     }
-    // const changePosition = (index) => {
-    //     const copyOfCurrentCircle = [...currentCircle];
-    //     copyOfCurrentCircle[index].x = getRandom();
-    //     copyOfCurrentCircle[index].y = getRandom();
-    //     return copyOfCurrentCircle;
-    // }
+
     const changePosition = (index) => {
         changeCircles(currentCircle.map((circle, i) => {
             if (i === index) {
