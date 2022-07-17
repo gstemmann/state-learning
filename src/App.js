@@ -10,13 +10,14 @@ import ShoppingList from './ShoppingList';
 // import ShoppingList from './ShoppingList';
 import Toggler from './Toggler';
 import SimpleForm from './SimpleForm';
+import ProfileViewer from './ProfileViewer';
 
 
 
 function App() {
   return (
     <div className="App">
-    <SimpleForm />
+    <ProfileViewer />
        
     </div>
   );
