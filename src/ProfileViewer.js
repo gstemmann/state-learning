@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 
 
-const ProfileViewer = ({ name = "Elie" }) => {
+const ProfileViewer = ({ name = "Elie", color="purple"}) => {
     const [data, setData] = useState(null);
 
     useEffect(() => {
@@ -11,12 +11,13 @@ const ProfileViewer = ({ name = "Elie" }) => {
             setData(result.data.name);
         }
         fetchData();
+        //effect is only going to change when name changes.. this array prop is the 2nd parameter in the useEffect
     }, [name]);
 
     return (
         <div>
             <h1>Profile Viewer</h1>
-            <p>{data ? data : 'Loading... '}</p>
+            <p style={{color}} >{data ? data : 'Loading... '}</p>
         </div>
             
     )
