@@ -11,7 +11,7 @@ const Timer = () => {
 
     return (
         <div>
-            <h1>{seconds}</h1>
+            <h1>here is the timer: {seconds}</h1>
         </div>
     );
 }

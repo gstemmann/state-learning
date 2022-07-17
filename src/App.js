@@ -13,14 +13,15 @@
 // import ProfileViewer from './ProfileViewer';
 // import ProfileSearchForm from './ProfileSearchForm';
 // import ProfileViewerWithSearch from './ProfileViewerWithSearch';
-import Timer from './Timer';
-
+// import Timer from './Timer';
+// import TimerWrapper from './TimerWrapper';
+import Video from './Video';
 
 
 function App() {
   return (
     <div className="App">
-      <Timer />
+      <Video />
     </div>
   );
 }
