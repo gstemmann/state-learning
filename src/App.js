@@ -15,13 +15,20 @@
 // import ProfileViewerWithSearch from './ProfileViewerWithSearch';
 // import Timer from './Timer';
 // import TimerWrapper from './TimerWrapper';
-import Video from './Video';
+// import MoodClicker from './MoodClicker';
+// import Timer2 from './Timer2';
+// import SignupForm from './SignupForm';
+import Child from './family/Child';
+import React from 'react';
+import ReactDOM from 'react-dom';
+
+
 
 
 function App() {
   return (
     <div className="App">
-      <Video />
+      <Child />
     </div>
   );
 }
